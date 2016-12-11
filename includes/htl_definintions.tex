@@ -12,20 +12,24 @@
 %\usepackage{helvet}						% Kommentar wegnehmen, um in Helvetica zu schreiben
 %\renewcommand{\familydefault}{\sfdefault}
 %\fontfamily{phv}\selectfont
-								
+
 \usepackage{amssymb}
+\usepackage{amsmath}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\usepackage{geometry}
 \usepackage{tabularx}
+\usepackage{longtable} % table over multiple pages
 \usepackage{multirow}
 \usepackage{arydshln}
 \usepackage{subfig}
-
+\usepackage{pdfpages}
+\usepackage{framed}
 
 \usepackage{forloop}								
 \usepackage{listings}
+\usepackage{fancyvrb}
 \usepackage{color} 
 \usepackage{colortbl}
 \usepackage{courier}
@@ -70,7 +74,9 @@
 %	Paragraph mit Zeilenumbruch nachher
 \def\htlParagraph#1{\paragraph*{#1}$\;$ \\}
 
-
+%   Short Version of \today
+\newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
+\newcommand{\todayshort}{\leadingzero{\day}.\leadingzero{\month}.\the\year}
 
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 	Code Formatierung		
@@ -87,8 +93,7 @@
  
 \lstset{ % 
 %  language=Octave,                			% the language of the code 
-%  basicstyle=\footnotesize,           		% the size of the fonts that are used for the code 
- 	basicstyle=\ttfamily, ,           		% the size of the fonts that are used for the code 
+ 	basicstyle=\ttfamily\footnotesize, 		% the size of the fonts that are used for the code 
 	numbers=left,                   		% where to put the line-numbers 
 	numberstyle=\tiny\color{gray},  		% the style that is used for the line-numbers 
 	stepnumber=1,                   		% the step between two line-numbers. If it's 1, each line  
