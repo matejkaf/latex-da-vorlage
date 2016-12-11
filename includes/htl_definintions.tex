@@ -1,0 +1,204 @@
+%!TEX root=../Vorlage_DA.tex
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	Packages
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}                		
+\usepackage{german}
+\usepackage{ngerman}
+\usepackage[parfill]{parskip}    			% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}						% Use pdf, png, jpg, or epsß with pdflatex; use eps in DVI mode
+											% TeX will automatically convert eps --> pdf in pdflatex		
+
+%\usepackage{helvet}						% Kommentar wegnehmen, um in Helvetica zu schreiben
+%\renewcommand{\familydefault}{\sfdefault}
+%\fontfamily{phv}\selectfont
+								
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{arydshln}
+\usepackage{subfig}
+
+
+\usepackage{forloop}								
+\usepackage{listings}
+\usepackage{color} 
+\usepackage{colortbl}
+\usepackage{courier}
+\usepackage{pifont}
+
+\usepackage[pdftex]{hyperref}
+\usepackage{url}
+
+\usepackage{float} % für \begin{figure}[H]
+
+
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	Dokumentabmessungen, Farbdefinitionen	
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\geometry {a4paper, left=22mm, right=22mm, top=25mm, bottom=25mm, landscape}
+\geometry {a4paper, bottom=30mm}%, left=30mm, right=30mm, top=25mm, bottom=25mm}
+\pagestyle{headings}
+
+\definecolor{grey}{RGB}{127,127,127}
+\definecolor{lightgrey}{RGB}{180,180,180}
+\definecolor{dkgreen}{rgb}{0,0.6,0}  
+\definecolor{gray}{rgb}{0.5,0.5,0.5} 
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+\definecolor{cssId}{rgb}		{0,0,0.6 }%{0.75, 0.00, 0.00 }
+\definecolor{cssAttribute}{rgb}	{0.58,0,0.82 }%{0.00, 0.00, 0.75 }
+\definecolor{cssClass}{rgb}		{0,0,0.6 }%{0.00, 0.75, 0.00 }
+\definecolor{cssComment}{rgb}	{0,0.6,0 }%{0.00, 0.75, 0.00 }
+\definecolor{cssString}{rgb}	{0.6,0,0 }%{0.00, 0.75, 0.00 }
+
+
+
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	Diverse Befehle		
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%	Quelltext im Textfluss
+\def\inlinecode#1{\texttt{\color{gray}{#1}}}
+
+
+%	Paragraph mit Zeilenumbruch nachher
+\def\htlParagraph#1{\paragraph*{#1}$\;$ \\}
+
+
+
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	Code Formatierung		
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{literate=%
+{Ö}{{\"O}}1 
+{Ä}{{\"A}}1 
+{Ü}{{\"U}}1 
+{ß}{{\ss}}2 
+{ü}{{\"u}}1 
+{ä}{{\"a}}1 
+{ö}{{\"o}}1
+}
+ 
+\lstset{ % 
+%  language=Octave,                			% the language of the code 
+%  basicstyle=\footnotesize,           		% the size of the fonts that are used for the code 
+ 	basicstyle=\ttfamily, ,           		% the size of the fonts that are used for the code 
+	numbers=left,                   		% where to put the line-numbers 
+	numberstyle=\tiny\color{gray},  		% the style that is used for the line-numbers 
+	stepnumber=1,                   		% the step between two line-numbers. If it's 1, each line  
+                                  			% will be numbered 
+	numbersep=5pt,                  		% how far the line-numbers are from the code 
+	backgroundcolor=\color{white},    	  	% choose the background color. You must add \usepackage{color}
+	showspaces=false,               		% show spaces adding particular underscores 
+	showstringspaces=false,      	   		% underline spaces within strings
+	showtabs=false,                 		% show tabs within strings adding particular underscores
+%	frame=single,                   		% adds a frame around the code
+	frame=l,
+	rulecolor=\color{dkgreen},        		% if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	tabsize=2,                      		% sets default tabsize to 2 spaces
+	captionpos=b,                   		% sets the caption-position to bottom
+	breaklines=true,                		% sets automatic line breaking
+	breakatwhitespace=false,        		% sets if automatic breaks should only happen at whitespace
+%	title=\lstname,                   		% show the filename of files included with \lstinputlisting;
+          	                        		% also try caption instead of title
+	keywordstyle=\color{blue},          	% keyword style
+	commentstyle=\color{dkgreen},       	% comment style
+	stringstyle=\color{mauve},    	     	% string literal style
+	escapeinside={\%*}{*)},            		% if you want to add LaTeX within your code
+	morekeywords={*,...},              		% if you want to add more keywords to the set
+	deletekeywords={...}             	 	% if you want to delete keywords from the given language
+}
+
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	CSS		
+\lstdefinelanguage{CSS}{
+		alsoletter={\\,/,*,:,-,\#,.},
+		identifierstyle=\idstyle,
+        keywords={accelerator:, azimuth:, background:, background-attachment:, background-color:, background-image:, background-position:, background-position-x:, background-position-y:, background-repeat:, behavior:, border:, border-bottom:, border-bottom-color:, border-bottom-style:, border-bottom-width:, border-collapse:, border-color:, border-left:, border-left-color:, border-left-style:, border-left-width:, border-right:, border-right-color:, border-right-style:, border-right-width:, border-spacing:, border-style:, border-top:, border-top-color:, border-top-style:, border-top-width:, border-width:, bottom   :, caption-side:, clear:, clip:, color:, content:, counter-increment:, counter-reset:, cue:, cue-after:, cue-before:, cursor:, direction:, display:, elevation:, empty-cells :, filter:, float:, font:, font-family:, font-size:, font-size-adjust:, font-stretch:, font-style:, font-variant:, font-weight:, height:, ime-mode:, include-source:, layer-background-color:, layer-background-image:, layout-flow:, layout-grid:, layout-grid-char:, layout-grid-char-spacing:, layout-grid-line:, layout-grid-mode:, layout-grid-type:, left:, letter-spacing:, line-break:, line-height:, list-style:, list-style-image:, list-style-position:, list-style-type:, margin:, margin-bottom:, margin-left:, margin-right:, margin-top:, marker-offset:, marks:, max-height:, max-width:, min-height:, min-width:, -moz-binding:, -moz-border-radius:, -moz-border-radius-topleft:, -moz-border-radius-topright:, -moz-border-radius-bottomright:, -moz-border-radius-bottomleft:, -moz-border-top-colors:, -moz-border-right-colors:, -moz-border-bottom-colors:, -moz-border-left-colors:, -moz-opacity:, -moz-outline:, -moz-outline-color:, -moz-outline-style:, -moz-outline-width:, -moz-user-focus:, -moz-user-input:, -moz-user-modify:, -moz-user-select:, orphans:, outline:, outline-color:, outline-style:, outline-width:, overflow:, overflow-X:, overflow-Y:, padding:, padding-bottom:, padding-left:, padding-right:, padding-top:, page:, page-break-after:, page-break-before:, page-break-inside:, pause:, pause-after:, pause-before:, pitch:, pitch-range:, play-during:, position:, quotes:, -replace:, richness:, right:, ruby-align:, ruby-overhang:, ruby-position:, -set-link-source:, size:, speak:, speak-header:, speak-numeral:, speak-punctuation:, speech-rate:, stress:, scrollbar-arrow-color:, scrollbar-base-color:, scrollbar-dark-shadow-color:, scrollbar-face-color:, scrollbar-highlight-color:, scrollbar-shadow-color:, scrollbar-3d-light-color:, scrollbar-track-color :, table-layout:, text-align:, text-align-last:, text-decoration:, text-indent:, text-justify:, text-overflow:, text-shadow:, text-transform:, text-autospace:, text-kashida-space:, text-underline-position:, top:, unicode-bidi:, -use-link-source:, vertical-align:, visibility:, voice-family:, volume :, white-space:, widows:, width:, word-break:, word-spacing:, word-wrap:, writing-mode},
+        keywordstyle=\color{cssAttribute},%\bfseries,
+        ndkeywords={@import, @media, @page, @font-face, @charset, @namespace, a, html, body, title, pre, h1, h2, h3, h4, h5, h6, ul, ol, li, p, br, blockquote, dl, dt, dd, div, img, strong, em, cite, tt, i, b, table, tr, td, th, frame, form, option, input, button, nav, section, article, aside, footer, hr, sup, sub, del, ins, small, span},
+        ndkeywordstyle=\color{cssId},%,\bfseries,
+%        identifierstyle=\color{black},
+%        sensitive=false,
+%        comment=[l]{//},
+        morecomment=[s]{/*}{*/},
+        commentstyle=\color{cssComment}\ttfamily,
+        stringstyle=\color{cssString}\ttfamily,
+        morestring=[b]',
+        morestring=[b]"
+}
+
+\makeatletter
+\newcommand*\idstyle[1]{%
+         \expandafter\id@style\the\lst@token{#1}\relax%
+ }
+
+ \def\id@style#1#2\relax{%
+           	\ifnum\pdfstrcmp{#1}{\#}=0%
+                \small\ttfamily\color{cssId} \the\lst@token%
+            \else%
+		      	\ifnum\pdfstrcmp{#1}{.}=0%
+    	            \small\ttfamily\color{cssClass} \the\lst@token%
+        		\else%
+					\ifnum\pdfstrcmp{#1}{:}=0%
+    	            	\small\ttfamily\color{cssAttribute} \the\lst@token%
+    	         	\else%
+		     	 		%\edef\tempa{\uccode#1}%
+              			\edef\tempa{\lccode`#1}%
+              			\edef\tempb{`#1}%
+              			\ifnum\tempa=\tempb%
+                			\small\ttfamily\color{mauve} \the\lst@token%
+              			\else%
+                 	 		\the\lst@token%
+    	         		\fi%
+	           		\fi%
+	            \fi%
+            \fi%
+ }
+\makeatother
+
+
+
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	JavaScript	
+\lstdefinelanguage{JavaScript}{
+        keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+		alsoletter={\{,\}\\,/,*,:,-,\#,.},
+ %       keywordstyle=\color{blue}\bfseries,
+        ndkeywords={class, export, boolean, throw, implements, import, this},
+%        ndkeywordstyle=\color{darkgray}\bfseries,
+%        identifierstyle=\color{black},
+%        sensitive=false,
+        comment=[l]{//},
+        morecomment=[s]{/*}{*/},
+%        commentstyle=\color{purple}\ttfamily,
+%        stringstyle=\color{red}\ttfamily,
+        morestring=[b]',
+        morestring=[b]"
+}
+
+
+
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	TypoScript	
+\lstdefinelanguage{TypoScript}{
+        keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+		alsoletter={\{,\}\\,/,*,:,-,\#,.},
+ %       keywordstyle=\color{blue}\bfseries,
+        ndkeywords={class, export, boolean, throw, implements, import, this},
+%        ndkeywordstyle=\color{darkgray}\bfseries,
+%        identifierstyle=\color{black},
+%        sensitive=false,
+        comment=[l]{//},
+        morecomment=[s]{/*}{*/},
+%        commentstyle=\color{purple}\ttfamily,
+%        stringstyle=\color{red}\ttfamily,
+        morestring=[b]',
+        morestring=[b]"
+}

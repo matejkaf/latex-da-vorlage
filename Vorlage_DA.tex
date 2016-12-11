@@ -1,0 +1,140 @@
+\documentclass[11pt, oneside]{book}   		% Allgemeine Schriftgröße, Dokumententyp
+\input{./includes/htl_definintions.tex}		% Formatierung der Dokuments, Diverse Befehle
+
+
+%	########################################################
+% 					Allgemeine Informationen			
+%	########################################################
+\def\htlArbeit{Diplomarbeit }
+\def\htlArbeitsthema{\LaTeX -Vorlage für eine \htlArbeit}	% Thema oder Titel der Arbeit
+\def\htlArbeitstitel{Arbeitstitel für das Projekt }			% Arbeitstitel
+
+
+\begin{document}
+
+%	########################################################
+% 						Einleitung			
+%	########################################################
+\pagenumbering{roman}	% Beginn mit römischen Seitenzahlen
+
+%	--------------------------------------------------------
+% 	Deckblatt
+%	--------------------------------------------------------			
+\input{./chapters/Pre-01-deckblatt.tex}
+
+%	--------------------------------------------------------
+% 	Arbeitstitel
+%	--------------------------------------------------------		
+\input{./chapters/Pre-02-arbeitstitel.tex}
+
+%	--------------------------------------------------------
+% 	Eidesstattliche Erklärung
+%	--------------------------------------------------------			
+\input{./chapters/Pre-03-erklaerung.tex}
+
+%	--------------------------------------------------------
+% 	Inhaltsverzeichnis
+%	--------------------------------------------------------			
+\tableofcontents
+
+%	--------------------------------------------------------
+% 	Vorwort
+%	--------------------------------------------------------	
+\input{./chapters/Pre-04-vorwort.tex}
+
+%	--------------------------------------------------------
+% 	Zusammenfassung
+%	--------------------------------------------------------		
+\input{./chapters/Pre-05-kurzfassung.tex}
+
+%	--------------------------------------------------------
+% 	Abstract
+%	--------------------------------------------------------		
+\input{./chapters/Pre-06-abstract.tex}
+
+
+
+%	########################################################
+% 						Arbeit			
+%	########################################################
+
+%	--------------------------------------------------------
+% 	INFO: Zitieren, Abbildungen, Listing
+%	-------------------------------------------------------	
+\input{./chapters/Pre-XX-beispiele.tex} 	% Nur zur Info
+
+%	--------------------------------------------------------
+% 	Aufgabenstellung / Pflichtenheft
+%	--------------------------------------------------------		
+\input{./chapters/01-aufgabenstellung.tex}
+\pagenumbering{arabic}	% Beginn mit arabischen Seitenzahlen
+
+%	--------------------------------------------------------
+% 	Projektbeschreibung
+%	--------------------------------------------------------	
+\input{./chapters/02-projektbeschreibung.tex}
+
+%	--------------------------------------------------------
+% 	Bedienungsanleitung
+%	--------------------------------------------------------
+\input{./chapters/03-bedienungsanleitung.tex}
+
+%	--------------------------------------------------------
+% 	Evaluierung
+%	--------------------------------------------------------
+\input{./chapters/04-evaluierung.tex}
+
+%	--------------------------------------------------------
+% 	Persönliche Erfahrungen
+%	--------------------------------------------------------
+\input{./chapters/05-erfahrungen.tex}
+
+%	--------------------------------------------------------
+% 	Autoren
+%	--------------------------------------------------------
+\input{./chapters/06-autoren.tex}
+
+
+%	########################################################
+% 	Anhang		
+%	########################################################
+\appendix
+\renewcommand{\thechapter}{\Alph{chapter}} 
+\setcounter{chapter}{0}
+
+%	--------------------------------------------------------
+% 	Diverse Anhänge
+%	--------------------------------------------------------
+\input{./chapters/App-01-anhaenge.tex}	
+
+%	--------------------------------------------------------
+% 	Richtlinien für die Erstellung
+%	--------------------------------------------------------	
+\input{./chapters/App-02-richtlinien.tex}
+
+%	--------------------------------------------------------
+% 	Standards für Ingenieurprojekte
+%	--------------------------------------------------------	
+\input{./chapters/App-03-standard-ing.tex}
+
+%	--------------------------------------------------------
+% 	Standards für Technikerprojekte
+%	--------------------------------------------------------	
+\input{./chapters/App-04-standard-tech.tex}
+
+
+%	########################################################
+% 	Quellenverzeichnis 		
+%	########################################################
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\bibliographystyle{ieeetr}
+\bibliography{./includes/literatur}
+
+
+%	########################################################
+% 	Abbildungsverzeichnis 		
+%	########################################################
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+
+\end{document}  
