@@ -10,7 +10,8 @@
 %	--------------------------------------------------------
 \chapter{\LaTeX}
 
-\LaTeX (gesprochen Latech) ist ein Textsatzsystem das speziell für umfangreiche  und komplexe wissenschaftliche, technische und mathematische Dokumente entwickelt wurde.
+Das vorliegende Dokument wurde in \LaTeX\ erstellt.
+\LaTeX\ (gesprochen Latech) ist ein Textsatzsystem das speziell für umfangreiche  und komplexe wissenschaftliche, technische und mathematische Dokumente entwickelt wurde.
 Man schreibt Quelltext wie bei einem Programm und übersetzt diesen Quelltext in ein PDF Dokument.
 Siehe \cite{bib:latexintro}.
 
@@ -32,8 +33,28 @@ Für Mac: MacTeX
 \url{https://tug.org/mactex/}
 
 Für Windows: MiKTeX
-\url{http://miktex.org}
+\url{http://miktex.org}\\
+Zusätzlich auch die neuest Adobe Reader Version installieren!
 
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\section{Bitmap Fonts}
+
+
+Bei MiKTeX unter Windows kann es ein Font Problem geben.
+Falls die Schrift nicht scharf ist --- PDF so vergrößern dass ein Buchstabe gut 10 cm groß ist --- dann sieht man die Pixel, siehe Abbildung \ref{fig:bitmapfont}.
+In diesem Fall wird ein sogenannter Bitmap-Font verwendet. 
+Besser ist ein Vektor-Font, dieser lässt sich beliebig ohne Qualitätsverlust vergrößern.
+
+\textbf{Lösung:}
+Mit "`MiKTex Package Manager"' das Package \verb+cm-super+ installieren.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{./media/images/bitmap_font}
+  	\caption{Oben Bitmap-, unten Vektor-Font}
+  	\label{fig:bitmapfont}
+\end{figure}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section{LaTeX Quelltext}
@@ -285,6 +306,25 @@ while(x>0) {
 
 Siehe auch \url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\section{Code im Text}
+
+\begin{minipage}[t]{\linewidth}
+\begin{Verbatim}[frame=single]
+Mit dem Befehl lstinline können kurze Programmfragmente 
+direkt in den Textfluss integriert werden.
+Das sieht dann so aus: 
+\lstinline[language=java]{labels.add("" + i)}.
+Allzu lange sollten diese Programmausschnitte aber nicht sein.
+\end{Verbatim}
+\end{minipage}
+
+Mit dem Befehl lstinline können kurze Programmfragmente 
+direkt in den Textfluß integriert werden.
+Das sieht dann so aus: 
+\lstinline{labels.add("" + i)}.
+Allzu lange sollten diese Programmausschnitte aber nicht sein.
+
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section{Seitenümbruche}
@@ -342,9 +382,8 @@ public void prepend(Node n) {
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section{Quellen und Literatur}
 
-Alle Quellen werden im Dokument \verb+includes/literatur.bib+ im BibTeX Format definiert.
-
-\url{http://www.bibtex.org/Format/}
+Alle Quellen befinden sich im Dokument \verb+chapters/Post-01-literatur.tex+ .
+Eine Quelle erhält mit \lstinline|\bibitem{bib:name}| einen Namen.
 
 Im Text wird durch den Befehl \lstinline{\cite} zitiert.
 Bsp.:
@@ -357,8 +396,6 @@ Siehe \cite{bib:latexintro}.
 Siehe \cite{bib:latexintro}.
 \end{framed}
 
-
-BibTeX braucht einen eigenen Übersetzungsvorgang (Vorgang: 1xBibTeX, 2xLaTeX kompilieren).
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -374,6 +411,10 @@ Dies kann (in kleinerem Umfang) statt Einträgen im Literaturverzeichnis verwend
 \url{http://www.orf.at}
 \end{framed}
 
+Lange URL's sehen nicht besonders gut aus. Etwa \url{https://www.youtube.com/watch?v=_vQaOvPsLko&list=PL6gx4Cwl9DGBsvRxJJOzG4r4k_zLKrnxl&index=49}.
+
+In diesem Fall bietet es sich an solche URL's mit einem Kurz-URL-Dienst (z.B. \url{tinyurl.com}) zu verkürzen. 
+Obige URL in verkürzter Form: \url{http://tinyurl.com/hqtzqan}
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

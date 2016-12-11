@@ -5,7 +5,7 @@
 %	########################################################
 % 					Allgemeine Informationen			
 %	########################################################
-\def\htlArbeitsthema{\LaTeX -Vorlage}	% Thema oder Titel der Arbeit
+\def\htlArbeitsthema{\LaTeX -Vorlage V2.4}	% Thema oder Titel der Arbeit
 
 \begin{document}
 
@@ -130,7 +130,10 @@
 %	########################################################
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \bibliographystyle{ieeetr}
-\bibliography{./includes/literatur}
+
+\input{./chapters/Post-01-literatur.tex}
+  
+%\bibliography{./includes/literatur}
 
 
 %	########################################################
@@ -148,7 +151,7 @@
 %	--------------------------------------------------------
 % 	Autoren
 %	--------------------------------------------------------
-\input{./chapters/Post-01-autoren.tex}
+\input{./chapters/Post-02-autoren.tex}
 
 
 

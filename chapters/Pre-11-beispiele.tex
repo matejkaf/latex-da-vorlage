@@ -49,7 +49,8 @@ Beispiel: Siehe Abbildung \ref{htl01} auf Seite \pageref{htl01}.
   \qquad
   \subfloat[Logo der HTL Braunau.]{\label{fig:b}\includegraphics[width=.25\textwidth]{./media/images/htl_c_cmyk_rein.pdf}}
   \label{fig:canvas_01}
-\caption[]{Zwei Logos der HTL Braunau in einer Abbildung zusammengefasst.}
+  % caption - In eckigen Klammern: Text für das Abbildungsverzeichnis
+  \caption[Zwei Logos der HTL Braunau]{Zwei Logos der HTL Braunau in einer Abbildung zusammengefasst.}
 \end{figure}
 
 
@@ -63,7 +64,7 @@ Beispiel: Siehe Abbildung \ref{htl01} auf Seite \pageref{htl01}.
 \qquad
   \subfloat[Logo]{\label{fig:b}\includegraphics[width=.15\textwidth]{./media/images/htl_c_cmyk_rein.pdf}}
   \label{fig:canvas_04}
-\caption[]{Dreimal das Logo der HTL Braunau.}
+\caption[Drei Logos der HTL Braunau]{Dreimal das Logo der HTL Braunau.}
 \end{figure}
 
 
@@ -78,23 +79,24 @@ Dem Leser Hinweise darüber zu geben wo genauere/weitere Informationen zu einem 
 
 Es ist erlaubt fremde Quellen zu zitieren solange dies eindeutig erkennbar ist und sich die zitierten Stellen auf einen kurzen Absatz mit wenigen Zeilen beschränken. Auch wenn nicht wortwörtlich zitiert wird ist die Quelle der Information anzugeben.
 
-Wörtliche Zitate werden durch Anführungszeichen begonnen und beendet und kursiv geschrieben: \emph{\glqq We tend to think of navigating a website as clicking from page-to-page via some kind of global navigation that’s always visible. When it comes to a single page, we often think scrolling is the one and only way to move from one end to the next.\grqq}~\cite{bib:bradley1}
+Wörtliche Zitate werden durch Anführungszeichen begonnen und beendet sowie kursiv geschrieben: 
+\emph{\glqq Wissenschaftliches Plagiat: Man kann sich zwar mit fremden Federn schmücken, aber man kann nicht mit ihnen fliegen.\grqq}~\cite{bib:uhlenbruck1}
+
+
+Längere Zitate werden durch Einrücken vom normalen Text abgesetzt:
+\begin{quotation}
+\noindent
+\emph{\glqq We tend to think of navigating a website as clicking from page-to-page via some kind of global navigation that’s always visible. When it comes to a single page, we often think scrolling is the one and only way to move from one end to the next.\grqq}~\cite{bib:bradley1}
+\end{quotation}
 
 Die eckigen Klammer mit Nummer kennzeichnet die Quelle.
 Am Ende des Dokuments werden alle Quellen im Literaturverzeichnis aufgelistet. \cite{bib:wikilitverz}.
 
 Das Verwenden fremden Gedankenguts ohne die Quelle anzugeben ist ein Plagiat (geistiger Diebstahl, \cite{bib:wikiplagiat}) und unter Umständen sogar eine Urheberrechtsverletzung.
 
-\begin{quotation}
-\noindent
->>Wissenschaftliches Plagiat: Man kann sich zwar mit fremden Federn schmücken, aber man kann nicht mit ihnen fliegen.<< 
-\cite{bib:uhlenbruck1}
-\end{quotation}
 
 Verweise in das Literaturverzeichnis sind nicht auf Zitate beschränkt sondern können auch eingesetzt werden um darauf hinzuweisen wo zu einem Thema mehr Informationen erhältlich sind.
 
-
-Die einzelnen Quellen sind in einer eigenen Datei hinterlegt. Konkret ist es bei diesem Dokument die Datei \href{"./includes/literatur.bib"}{\emph{literatur.bib}}, die sich im Verzeichnis \emph{includes} befindet.
 
 Es ist zunehmend eine Kurzzitierweise in Fußnoten üblich: Nachname des Verfassers, Kurztitel, Seitenangabe.\footnote{John Doe, \glqq Verwendung von Fußnoten\grqq, Seite 12.}
 
