@@ -1,11 +1,11 @@
-\documentclass[11pt, oneside]{scrbook}   		% Allgemeine Schriftgröße, Dokumententyp
+\documentclass[11pt, oneside, numbers=noenddot]{scrbook}   		% Allgemeine Schriftgröße, Dokumententyp
 \input{./includes/htl_definintions.tex}		% Formatierung der Dokuments, Diverse Befehle
 
 
 %	########################################################
 % 					Allgemeine Informationen			
 %	########################################################
-\def\htlArbeitsthema{\LaTeX -Vorlage V2.41}	% Thema oder Titel der Arbeit
+\def\htlArbeitsthema{\LaTeX -Vorlage V2.42}	% Thema oder Titel der Arbeit
 
 \begin{document}
 
@@ -106,8 +106,6 @@
 % 	Anhang		
 %	########################################################
 \appendix
-\renewcommand{\thechapter}{\Alph{chapter}} 
-\setcounter{chapter}{0}
 
 %	--------------------------------------------------------
 % 	Diverse Anhänge
@@ -132,8 +130,6 @@
 \bibliographystyle{ieeetr}
 
 \input{./chapters/Post-01-literatur.tex}
-  
-%\bibliography{./includes/literatur}
 
 
 %	########################################################
