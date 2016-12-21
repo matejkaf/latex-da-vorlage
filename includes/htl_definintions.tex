@@ -1,7 +1,9 @@
 %!TEX root=../Vorlage_DA.tex
+
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 	Packages
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage{geometry}                		
 \usepackage{german}
 \usepackage{ngerman}
@@ -39,21 +41,41 @@
 \usepackage{url}
 
 \usepackage{float} % für \begin{figure}[H]
+\usepackage{fancyhdr}
+\usepackage{lipsum}
 
 
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 	Dokumentabmessungen, Farbdefinitionen	
+% 	Dokumentabmessungen	
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\geometry {a4paper, left=22mm, right=22mm, top=25mm, bottom=25mm, landscape}
-\geometry {a4paper, bottom=30mm}%, left=30mm, right=30mm, top=25mm, bottom=25mm}
-\pagestyle{headings}
+
+\geometry {a4paper, bottom=30mm, right=25mm}%, left=30mm, right=30mm, top=25mm, bottom=25mm}
+
+
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	Kopfzeile
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+
+% Kopfzeile links: leer rechts: Kapitel
+%\lhead{}
+%\rhead{\nouppercase\leftmark}
+
+% Kopfzeile links: Kapitel rechts: HTL Logo
+\lhead{\nouppercase\leftmark}
+\rhead{\includegraphics[width=0.9cm]{./media/images/htl_c_cmyk_rein.pdf}}
+
+
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	Farbdefinitionen	
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \definecolor{grey}{RGB}{127,127,127}
 \definecolor{lightgrey}{RGB}{180,180,180}
 \definecolor{dkgreen}{rgb}{0,0.6,0}  
 \definecolor{gray}{rgb}{0.5,0.5,0.5} 
 \definecolor{mauve}{rgb}{0.58,0,0.82}
-
 
 \definecolor{cssId}{rgb}		{0,0,0.6 }%{0.75, 0.00, 0.00 }
 \definecolor{cssAttribute}{rgb}	{0.58,0,0.82 }%{0.00, 0.00, 0.75 }
