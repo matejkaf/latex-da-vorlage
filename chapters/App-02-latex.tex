@@ -430,7 +430,7 @@ irgendwo in den Text einfuegen.
 
 Eine Fußnote kann man einfach%
 \footnote{Hier zum Beispiel}
-irgendwo in den Text einfuegen, diese wird an das untere Ende der Seite gesetzt.
+irgendwo in den Text einfügen, diese wird an das untere Ende der Seite gesetzt.
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -441,5 +441,40 @@ Mit der Umgebung \lstinline{tabular} bzw. erweitert: \lstinline{tabularx}.
 Siehe \url{https://en.wikibooks.org/wiki/LaTeX/Tables}
 
 %: TODO Tabellen
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\section{Mehrspaltiger Text}
+
+\begin{multicols}{2}
+
+Um einen zweispaltigen Text zu erzeugen kann die \verb+multicols+ Umgebung verwendet werden
+
+\begin{Verbatim}[frame=single]
+\begin{multicols}{2}
+Text in 2 Spalten
+\end{multicols}
+\end{Verbatim}
+
+Hier wurde multicols verwendet um die Abbildung platzsparend neben dem Text zu platzieren.
+Siehe Logo der HTL Braunau in Abbildung \ref{logoTwoCols}.
+
+%	--------------
+%	Eine Abbildung
+
+\columnbreak
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\textwidth]{./media/images/htl_c_cmyk_rein.pdf}
+  	\caption{Logo auf der rechten Seite.}
+  	\label{logoTwoCols}
+\end{figure}
+
+Um einen Spaltenumbruch an einer bestimmten Stelle zu erzwingen:
+\begin{Verbatim}[frame=single]
+\columnbreak
+\end{Verbatim}
+
+
+\end{multicols}
 
 
