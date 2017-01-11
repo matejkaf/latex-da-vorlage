@@ -8,7 +8,7 @@
 %	--------------------------------------------------------
 % 	Überschrift, Inhaltsverzeichnis
 %	--------------------------------------------------------
-\chapter{\LaTeX}
+\chapter[\LaTeX ]{\LaTeX\protect\footnote{Franz Matejka}}
 
 Das vorliegende Dokument wurde in \LaTeX\ erstellt.
 \LaTeX\ (gesprochen Latech) ist ein Textsatzsystem das speziell für umfangreiche  und komplexe wissenschaftliche, technische und mathematische Dokumente entwickelt wurde.
@@ -147,6 +147,21 @@ Absatzumbruch & \lstinline!\par! oder leere Zeile.\\
 \end{Verbatim}
 
 Die Kapitelnummerierung und das Inhaltsverzeichnis werden automatisch erstellt.
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\section[Autoren]{Autoren\protect\footnote{Franz Matejka}}
+
+Für eine Diplomarbeit mit mehreren Autoren muss nachvollziehbar sein wer für welchen Teil der Urheber ist.
+
+Dies ist durch Fussnoten für Hauptkapitel bzw. Kapitel darzustellen. 
+Nicht für Unterkapitel oder Unterunterkapitel, d.h. eine Person ist immer für ein komplettes Hauptkapitel oder Kapitel verantwortlich.
+
+Die Fußnote ist wie folgt einzufügen.
+\begin{Verbatim}[frame=single]
+\section[Autoren]{Autoren\protect\footnote{Franz Matejka}}
+\end{Verbatim}
+
+Um zu verhindern, dass sich die Fußnotenmarke auch im Inhaltsverzeichnis befindet wird in eckigen Klammern zusätzlich der zu verwendende Text für das Inhaltsverzeichnis (ohne Fußnote) angegeben.
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
