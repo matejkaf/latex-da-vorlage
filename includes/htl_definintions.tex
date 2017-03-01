@@ -75,15 +75,21 @@
 % 	Kopfzeile
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagestyle{fancy}
-
-% Kopfzeile links: leer rechts: Kapitel
-%\lhead{}
-%\rhead{\nouppercase\leftmark}
+\pagestyle{fancyplain}
+\fancyhf{}
 
 % Kopfzeile links: Kapitel rechts: HTL Logo
-\lhead{\nouppercase\leftmark}
-\rhead{\includegraphics[width=0.9cm]{./media/images/htl_c_cmyk_rein.pdf}}
+\lhead{\fancyplain{}{\nouppercase\leftmark}}
+\rhead{\fancyplain{}{\includegraphics[width=0.9cm]{./media/images/htl_c_cmyk_rein.pdf}}}
+
+\cfoot{\fancyplain{\thepage}{}}
+\rfoot{\fancyplain{}{\thepage}}
+
+
+% Auskommentieren der folgenden Zeile setzt das HTL Logo in die
+% Mitte der Kopfzeile auf jeder ersten Haupt-Kapitelseite
+
+%\chead{\fancyplain{\includegraphics[width=1.5cm]{./media/images/htl_c_cmyk_rein.pdf}}{}}
 
 
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
