@@ -8,14 +8,13 @@
 %	--------------------------------------------------------
 % 	Überschrift, Inhaltsverzeichnis
 %	--------------------------------------------------------
-\chapter[\LaTeX ]{\LaTeX\protect\footnote{Franz Matejka}}
+\chapter{\LaTeX \authorA}
 
 Das vorliegende Dokument wurde in \LaTeX\ erstellt.
 \LaTeX\ (gesprochen Latech) ist ein Textsatzsystem das speziell für umfangreiche  und komplexe wissenschaftliche, technische und mathematische Dokumente entwickelt wurde.
 Man schreibt Quelltext wie bei einem Programm und übersetzt diesen Quelltext in ein PDF Dokument.
 Siehe \cite{bib:latexintro}.
-
-
+ 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section{Die Vorlage}
 
@@ -153,20 +152,35 @@ Absatzumbruch & \lstinline!\par! oder leere Zeile.\\
 Die Kapitelnummerierung und das Inhaltsverzeichnis werden automatisch erstellt.
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section[Autoren]{Autoren\protect\footnote{Franz Matejka}}
+\section{Autoren\authorB}
 
 Für eine Diplomarbeit mit mehreren Autoren muss nachvollziehbar sein wer für welchen Teil der Urheber ist.
+Dies ist durch \textbf{Namenskürzel} (2-stellig) in den Überschriften darzustellen (siehe in diesem Dokument).
 
-Dies ist durch Fussnoten für Hauptkapitel bzw. Kapitel darzustellen. 
-Nicht für Unterkapitel oder Unterunterkapitel, d.h. eine Person ist immer für ein komplettes Hauptkapitel oder Kapitel verantwortlich.
+Eine Person soll immer für ein komplettes Hauptkapitel (\verb+chapter+) oder Kapitel (\verb+section+) verantwortlich sein. 
+Eine Aufteilung auf Ebene der Unterkapitel (\verb+subsection+) oder Unterunterkapitel (\verb+subsubsection+) sollte vermieden werden.
 
-Die Fußnote ist wie folgt einzufügen.
+Die Namenskürzel werden in \verb+Vorlage_DA.tex+ definiert:
+
 \begin{Verbatim}[frame=single]
-\section[Autoren]{Autoren\protect\footnote{Franz Matejka}}
+% Initialen der Authoren
+\def\authorInitialsA{MM} % Max Mustermann
+\def\authorInitialsB{FF} % Frieda Fröhlich
+\def\authorInitialsC{FE} % Fritz Einstein
+\def\authorInitialsD{WA} % Weiterer Autor
 \end{Verbatim}
+ 
 
-Um zu verhindern, dass sich die Fußnotenmarke auch im Inhaltsverzeichnis befindet wird in eckigen Klammern zusätzlich der zu verwendende Text für das Inhaltsverzeichnis (ohne Fußnote) angegeben.
+Für das Einfügen der Namenskürzel ins Dokument dienen in weiterer Folge die Befehle 
+\verb+\authorA+, 
+\verb+\authorB+, 
+\verb+\authorC+, 
+\verb+\authorD+.
 
+Beispiel --- erzeugt die Überschrift dieses Kapitels:
+\begin{Verbatim}[frame=single]
+\section{Autoren\authorB}
+\end{Verbatim}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section{Bilder einfügen}
