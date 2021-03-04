@@ -16,5 +16,9 @@ git push -u origin master
 In weiterer Folge genügt:
 
 ```
+git add .
+git commit -m 'changes'
 git push
+git tag -a v2.63 -m 'text'
+git push origin v2.63
 ```
