@@ -1,174 +1,52 @@
-\documentclass[11pt, oneside, numbers=noenddot]{scrbook}   		% Allgemeine Schriftgröße, Dokumententyp
-\input{./includes/htl_definintions.tex}		% Formatierung der Dokuments, Diverse Befehle
+\documentclass[11pt, oneside, numbers=noenddot]{scrbook}  
+\input{./includes/htl_definintions.tex}	
 
-
-%	########################################################
-% 					Allgemeine Informationen			
-%	########################################################
 
 % Titel der Arbeit:
-\def\htlArbeitsthema{\LaTeX -Vorlage V2.63}	
-
-% Initialen der Authoren
-\def\authorInitialsA{MM} % Max Mustermann
-\def\authorInitialsB{FF} % Frieda Fröhlich
-\def\authorInitialsC{FE} % Fritz Einstein
-\def\authorInitialsD{WA} % Weiterer Autor
-
-% Die Initialen werden verwendet um anzuzeigen wer welches Kapitel
-% erstellt hat.
-
-% Die Befehle \authorA - \authorB werden in den Kapitelüberschriften angefügt
-\def\authorA{\textmd{\textsuperscript{\authorInitialsA}}}
-\def\authorB{\textmd{\textsuperscript{\authorInitialsB}}}
-\def\authorC{\textmd{\textsuperscript{\authorInitialsC}}}
-\def\authorD{\textmd{\textsuperscript{\authorInitialsD}}}
-
-
-
-%	########################################################
+\def\htlArbeitsthema{Thema der Diplomarbeit}	
 
 \begin{document}
 
-%	########################################################
-% 						Einleitung			
-%	########################################################
-\pagenumbering{roman}	% Beginn mit römischen Seitenzahlen
 
-%	--------------------------------------------------------
-% 	Deckblatt
-%	--------------------------------------------------------			
-\input{./chapters/Pre-01-deckblatt.tex}
+\pagenumbering{roman}	
+		
+\input{./chapters/00_deckblatt.tex}
+\input{./chapters/00_ee.tex}
 
-%	--------------------------------------------------------
-% 	Arbeitstitel
-%	--------------------------------------------------------		
-\input{./chapters/Pre-02-arbeitstitel.tex}
+\input{./chapters/00_abstract.tex}
 
-%	--------------------------------------------------------
-% 	Eidesstattliche Erklärung
-%	--------------------------------------------------------			
-\input{./chapters/Pre-03-erklaerung.tex}
-
-%	--------------------------------------------------------
-% 	Inhaltsverzeichnis
-%	--------------------------------------------------------			
+	
 \tableofcontents
+\pagenumbering{arabic}	
 
-%	--------------------------------------------------------
-% 	Vorwort
-%	--------------------------------------------------------	
-\input{./chapters/Pre-04-vorwort.tex}
-
-%	--------------------------------------------------------
-% 	Zusammenfassung
-%	--------------------------------------------------------		
-\input{./chapters/Pre-05-kurzfassung.tex}
-
-%	--------------------------------------------------------
-% 	Abstract
-%	--------------------------------------------------------		
-\input{./chapters/Pre-06-abstract.tex}
-
-\pagebreak
-\pagenumbering{arabic}	% Beginn mit arabischen Seitenzahlen
-
-%	########################################################
-%
-% 						Arbeit	
-%
-%   Diesen Abschnitt an die eigenen Erfodernisse anpassen.		
-%
-%
-%	########################################################
-
-%	--------------------------------------------------------
-% 	INFO: Gliederung und Allgemeines
-%	-------------------------------------------------------	
-\input{./chapters/Info-01-gliederung} 	% Nur zur Info
-
-%	--------------------------------------------------------
-% 	INFO: Zitieren, Abbildungen, Listing
-%	-------------------------------------------------------	
-\input{./chapters/Info-02-beispiele} 	% Nur zur Info
-
-%	--------------------------------------------------------
-% 	Aufgabenstellung / Pflichtenheft
-%	--------------------------------------------------------		
-\input{./chapters/01-aufgabenstellung.tex}
-
-%	--------------------------------------------------------
-% 	Entwurf
-%	--------------------------------------------------------	
-\input{./chapters/02-entwurf.tex}
-
-%	--------------------------------------------------------
-% 	Implementierung
-%	--------------------------------------------------------	
-\input{./chapters/03-implementierung.tex}
-
-%	--------------------------------------------------------
-% 	Test und Inbetriebnahme
-%	--------------------------------------------------------	
-\input{./chapters/04-test.tex}
-
-%	--------------------------------------------------------
-% 	Bedienungsanleitung
-%	--------------------------------------------------------
-\input{./chapters/05-bedienungsanleitung.tex}
-
-%	--------------------------------------------------------
-% 	Fazit und Persönliche Erfahrungen
-%	--------------------------------------------------------
-\input{./chapters/06-fazit.tex}
+\input{./chapters/01_introduction.tex}
+\input{./chapters/02_systemoverview.tex}
+\input{./chapters/03_contenta.tex}
+\input{./chapters/04_contentb.tex}
+\input{./chapters/05_contentc.tex}
+\input{./chapters/06_evaluation.tex}
+\input{./chapters/07_projectmanagement.tex}
+\input{./chapters/08_futurework.tex}
+\input{./chapters/09_relatedwork.tex}
+\input{./chapters/10_conclusion.tex}
 
 
-%	########################################################
-% 	Anhang		
-%	########################################################
 \appendix
 
-%	--------------------------------------------------------
-% 	Diverse Anhänge
-%	--------------------------------------------------------
-\input{./chapters/App-01-anhaenge.tex}	
+\input{./chapters/99_acknowledgements.tex}
 
-%	--------------------------------------------------------
-% 	LaTeX
-%	--------------------------------------------------------	
-\input{./chapters/App-02-latex.tex}
-
-%	--------------------------------------------------------
-% 	Abschließende Prüfungen - Diplomarbeit
-%	--------------------------------------------------------	
-\input{./chapters/App-03-richtlinien.tex}
-
-
-%	########################################################
-% 	Quellenverzeichnis 		
-%	########################################################
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\bibliographystyle{ieeetr}
-
-\input{./chapters/Post-01-literatur.tex}
-
-
-%	########################################################
-% 	Abbildungsverzeichnis 		
-%	########################################################
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-\listoffigures
-
-%	########################################################
-% 	Verzeichnis der Listings 		
-%	########################################################
-\addcontentsline{toc}{chapter}{Quelltextverzeichnis}
+\addcontentsline{toc}{chapter}{Listings}
 \lstlistoflistings
 
-%	--------------------------------------------------------
-% 	Autoren
-%	--------------------------------------------------------
-\input{./chapters/Post-02-autoren.tex}
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plain}
+\bibliography{literature}
+
+\input{./chapters/99_authors.tex}
 
 
 
