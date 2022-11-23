@@ -9,3 +9,4 @@ out/
 *.log
 *.out
 *.toc
+*.lof

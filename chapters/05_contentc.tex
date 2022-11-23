@@ -18,7 +18,8 @@ Die Vorlage kann von GitHub geladen werden:
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section{Programme}
 
-Programme (Editor + PDF Compiler) für \LaTeX:
+Online (empfohlen):
+Mit dem Service "`Overleaf"' (\url{https://www.overleaf.com/}). Damit können die Dokument online erstellt und gemeinsam bearbeitet werden.
 
 Für Mac: MacTeX
 \url{https://tug.org/mactex/}
@@ -26,9 +27,6 @@ Für Mac: MacTeX
 Für Windows: MiKTeX
 \url{http://miktex.org}\\
 Zusätzlich auch die neueste Adobe Reader Version installieren!
-
-Online:
-Mit dem Service "`Overleaf"' (\url{https://www.overleaf.com/}) gab es positive Erfahrungen. Damit können die Dokument online erstellt und gemeinsam verwendet werden.
 
 
 
@@ -407,8 +405,8 @@ public void prepend(Node n) {
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section{Quellen und Literatur}
 
-Alle Quellen befinden sich im Dokument \verb+chapters/Post-01-literatur.tex+ .
-Eine Quelle erhält mit \lstinline|\bibitem{bib:name}| einen Namen.
+Alle Quellen befinden sich im Dokument \verb+literature.bib+, in einem sogennanten BibTeX Format.
+Jede Quelle erhält einen Namen, z.B. \lstinline|bib:latexintro|.
 
 Im Text wird durch den Befehl \lstinline{\cite} zitiert.
 Bsp.:
