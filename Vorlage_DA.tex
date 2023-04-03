@@ -1,6 +1,21 @@
 \documentclass[11pt, oneside, numbers=noenddot]{scrbook}  
 \input{./includes/htl_definintions.tex}	
 
+% Initialen der Authoren
+\def\authorInitialsA{MM} % Max Mustermann
+\def\authorInitialsB{FF} % Frieda Fröhlich
+\def\authorInitialsC{FE} % Fritz Einstein
+\def\authorInitialsD{WA} % Weiterer Autor
+
+% Die Initialen werden verwendet um anzuzeigen wer welches Kapitel
+% erstellt hat.
+
+% Die Befehle \authorA - \authorB werden in den Kapitelüberschriften angefügt
+\def\authorA{\textmd{\textsuperscript{\authorInitialsA}}}
+\def\authorB{\textmd{\textsuperscript{\authorInitialsB}}}
+\def\authorC{\textmd{\textsuperscript{\authorInitialsC}}}
+\def\authorD{\textmd{\textsuperscript{\authorInitialsD}}}
+
 
 % Titel der Arbeit:
 \def\htlArbeitsthema{Thema der Diplomarbeit}	

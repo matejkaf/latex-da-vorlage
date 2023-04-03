@@ -19,6 +19,6 @@ In weiterer Folge genügt:
 git add .
 git commit -m 'changes'
 git push
-git tag -a v2.7 -m 'text'
+git tag -a v2.7 -m 'SJ 2022/23'
 git push origin v2.7
 ```
