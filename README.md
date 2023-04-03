@@ -6,7 +6,7 @@ GitHub: https://github.com/matejkaf/latex-da-vorlage.git
 
 # Administrative Informationen
 
-Erstes push auf Remote Repsoitory:
+Erstes push auf Remote Repository:
 
 ```
 git remote add origin https://github.com/matejkaf/latex-da-vorlage.git
