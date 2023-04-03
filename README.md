@@ -22,3 +22,8 @@ git push
 git tag -a v2.7 -m 'SJ 2022/23'
 git push origin v2.7
 ```
+
+```
+git add .;git commit -m 'Default Sprache Deutsch';git push
+```
+
