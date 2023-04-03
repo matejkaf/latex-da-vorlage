@@ -11,7 +11,7 @@
 \contentsline {lstlisting}{\numberline {4.6}JavaScript--Quelltext}{11}{lstlisting.4.6}%
 \addvspace {10\p@ }
 \contentsline {lstlisting}{\numberline {5.1}Komplizierter Quelltext.}{17}{lstlisting.5.1}%
-\contentsline {lstlisting}{\numberline {5.2}Java Quelltext.}{18}{lstlisting.5.2}%
+\contentsline {lstlisting}{\numberline {5.2}Java Quelltext.}{19}{lstlisting.5.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

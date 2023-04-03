@@ -25,5 +25,6 @@ git push origin v2.7
 
 ```
 git add .;git commit -m 'Default Sprache Deutsch';git push
+git add .;git commit -m 'Anführungszeichen in LaTeX dokumentiert';git push
 ```
 
